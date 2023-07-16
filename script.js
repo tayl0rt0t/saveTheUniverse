@@ -20,9 +20,9 @@ accuracy - .7
 */
 class Ship{
     constructor(hull,firepower,accuracy){
-        hull = this.hull;
-        firepower = this.firepower;
-        accuracy = this.accuracy;
+        this.hull = hull;
+        this.firepower = firepower;
+        this.accuracy = accuracy;
     }
 }
 class HumanShip extends Ship{
@@ -32,12 +32,11 @@ class HumanShip extends Ship{
         firepower = 5;
         accuracy = .7;
     }
-    
 }
 /**
  * REMEMBER BIND YOUR METHODS IF YOU PLAN TO USE THEM AS EVENT Listeners !!!!!!!
  */
-const S1 = new HumanShip();
+const S1 = new HumanShip(1,5,9);
 
 
 /*
@@ -56,6 +55,3 @@ class AlienShip extends Ship{
 }
 const AS1 = new AlienShip();
 
-
-// a = Math.floor(Math.random() * (7 - 3 ) + 3);
-// console.log(a);
